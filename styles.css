@@ -2,14 +2,84 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #0E4E8E; /* Main background color */
+    color: #fff; /* Text color */
 }
 
 header {
-    background-color: #333;
+    display: flex;
+    justify-content: center; /* Center logo horizontally */
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #009FFF;
+    position: relative; /* For positioning the "Why?" button */
+}
+
+.why-button {
+    position: absolute;
+    left: 1rem; /* Position it to the left */
+    top: 0.5rem; /* Adjust the vertical position */
+    cursor: pointer;
+}
+
+.why-button span {
+    background-color: #009FFF;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
     color: #fff;
-    text-align: center;
-    padding: 1rem;
+    font-weight: bold;
+}
+
+.why-menu {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #1A2A6C;
+    border: 1px solid #009FFF;
+    border-radius: 5px;
+    padding: 0.5rem;
+    width: 200px;
+    z-index: 10;
+}
+
+.why-button:hover .why-menu {
+    display: block;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.logo {
+    width: 100px; /* Reduced logo size */
+    height: auto;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1); /* Logo enlarges on hover */
+    filter: brightness(1.2);
+}
+
+.discord-button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.discord-icon {
+    width: 50px;
+    height: auto;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.discord-icon:hover {
+    transform: scale(1.1);
+    filter: brightness(1.2);
 }
 
 main {
@@ -20,24 +90,54 @@ main {
 }
 
 .product {
-    background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    background-color: #1A2A6C;
+    border: 1px solid #009FFF;
+    border-radius: 10px;
     padding: 1rem;
     margin: 1rem;
-    width: 300px;
-    text-align: center;
+    width: 600px;
+    text-align: left;
+    transition: transform 0.3s;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product-image {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 1rem;
+}
+
+.product-content {
+    flex: 1;
 }
 
 button {
-    background-color: #28a745;
+    background-color: #009FFF;
     color: #fff;
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 1rem;
 }
 
 button:hover {
-    background-color: #218838;
+    background-color: #0E4E8E;
+}
+
+footer {
+    background-color: #009FFF;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
